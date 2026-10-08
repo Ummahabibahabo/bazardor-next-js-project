@@ -1,6 +1,7 @@
 import Link from "next/link";
 import BannerImg from "@/app/assests/bazar-hero.png";
 import Image from "next/image";
+
 const Banner = () => {
   const date = new Date().toLocaleString("bn-BD", {
     timeZone: "Asia/Dhaka",

@@ -45,7 +45,7 @@ const MarqueePage = async () => {
 
               {/* Price */}
               <span className="text-[14px] text-[#1D271F]">
-                {data.today} টাকা/{unitText[data.unit]}
+                {data.today.toLocaleString("bn-BD")} টাকা/{unitText[data.unit]}
               </span>
 
               {/* Change */}
@@ -66,7 +66,9 @@ const MarqueePage = async () => {
                   <FaEquals className="text-[10px]" />
                 )}
 
-                <span>{data.change.pct}%</span>
+                <span>
+                  {Math.abs(data.change.pct).toLocaleString("bn-BD")}%
+                </span>
               </span>
             </div>
           ))}
