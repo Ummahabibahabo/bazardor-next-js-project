@@ -6,10 +6,10 @@ interface NavLinkProps {
 }
 const NavLink = async () => {
   const res = await fetch(
-    "https://api.api-store.workers.dev/api/bazardor/categories",
+    "https://api.abcz.workers.dev/api/bazardor/categories",
   );
   const navLinksData: NavLinkProps[] = await res.json();
-  console.log(navLinksData);
+  //   console.log(navLinksData);
   return (
     <div className="w-full border-t border-gray-100 border-b border-gray-100">
       <div className="max-w-7xl mx-auto h-[47px] px-5 flex items-center">
@@ -23,7 +23,7 @@ const NavLink = async () => {
               <span className="text-[14px] leading-none">{data.icon}</span>
 
               {/* Name */}
-              <span className="text-[#1D271F] text-[12px] font-medium group-hover:text-[#05893E] transition">
+              <span className="text-[#1D271F] text-[14px] font-medium group-hover:text-[#05893E] transition">
                 {data.nameBn}
               </span>
             </div>
