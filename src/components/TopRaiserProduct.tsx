@@ -1,6 +1,6 @@
 import { RxTriangleUp } from "react-icons/rx";
 
-interface IncreasePricePageProps {
+interface TopRaiserProductProps {
   id: number;
   slug: string;
   nameBn: string;
@@ -17,10 +17,10 @@ interface IncreasePricePageProps {
   };
 }
 
-const IncreasePricePage = async () => {
+const TopRaiserProduct = async () => {
   const res = await fetch("https://api.abcz.workers.dev/api/bazardor/products");
 
-  const riserData: IncreasePricePageProps[] = await res.json();
+  const riserData: TopRaiserProductProps[] = await res.json();
 
   const topRiserData = riserData
     .filter((data) => data.change.dir === "up")
@@ -103,4 +103,4 @@ const IncreasePricePage = async () => {
   );
 };
 
-export default IncreasePricePage;
+export default TopRaiserProduct;
