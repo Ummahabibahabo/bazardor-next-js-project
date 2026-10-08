@@ -23,7 +23,7 @@ const Banner = () => {
           বিস্তারিত, গড়, সর্বনিম্ন-সর্বাধিক এবং দামের পরিবর্তন এক জায়গায়।
         </p>
         <Link
-          href="/"
+          href="#সব-পণ্য"
           className="inline-block bg-[#05893E] px-4 py-2.5 rounded-xl text-white font-semibold text-[14px] hover:bg-[#047535] transition"
         >
           সব পণ্য দেখুন

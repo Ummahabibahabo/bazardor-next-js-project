@@ -1,3 +1,4 @@
+import AllProduct from "@/components/AllProduct";
 import Banner from "@/components/Banner";
 import TopFallersProduct from "@/components/TopFallersProduct";
 
@@ -9,6 +10,7 @@ export default function Home() {
       <Banner></Banner>
       <TopRaiserProduct></TopRaiserProduct>
       <TopFallersProduct></TopFallersProduct>
+      <AllProduct></AllProduct>
     </div>
   );
 }
