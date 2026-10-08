@@ -20,6 +20,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body>
         <Navbar></Navbar>
         <Marquee></Marquee>
+
         {children}
       </body>
     </html>
