@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import Marquee from "@/components/Marquee";
 import Footer from "@/components/Footer";
+import NavLink from "@/components/navbar/NavLink";
 
 const hindSiliguri = Hind_Siliguri({
   subsets: ["latin", "bengali"],
@@ -18,11 +19,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${hindSiliguri.className}  h-full antialiased`}>
-      <body>
-        <Navbar></Navbar>
+      <body className="bg-[#F0F5F0]">
+        <div className="max-w-7xl mx-auto p-8">
+          <Navbar></Navbar>
+        </div>
+        <NavLink></NavLink>
         <Marquee></Marquee>
 
-        {children}
+        <div className="max-w-7xl mx-auto p-8">{children}</div>
         <Footer></Footer>
       </body>
     </html>
