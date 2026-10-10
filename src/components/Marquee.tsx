@@ -22,7 +22,9 @@ const unitText = {
 };
 
 const MarqueePage = async () => {
-  const res = await fetch("https://api.abcz.workers.dev/api/bazardor/products");
+  const res = await fetch(
+    "https://openapi.programming-hero.com/api/bazardor/products",
+  );
 
   const marqueeData: MarqueeProps[] = await res.json();
 

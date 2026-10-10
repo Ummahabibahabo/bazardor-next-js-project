@@ -1,5 +1,6 @@
 import { FaEquals } from "react-icons/fa";
 import { RxTriangleDown, RxTriangleUp } from "react-icons/rx";
+import TodaysPrice from "./TodaysPrice";
 
 interface DetailsCardProps {
   data: {
@@ -116,6 +117,7 @@ const DetailsCard = ({ data }: DetailsCardProps) => {
           </div>
         </div>
       </div>
+      <TodaysPrice data={data}></TodaysPrice>
     </div>
   );
 };

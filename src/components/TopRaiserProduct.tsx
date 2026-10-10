@@ -19,7 +19,9 @@ interface TopRaiserProductProps {
 }
 
 const TopRaiserProduct = async () => {
-  const res = await fetch("https://api.abcz.workers.dev/api/bazardor/products");
+  const res = await fetch(
+    "https://openapi.programming-hero.com/api/bazardor/products",
+  );
 
   const riserData: TopRaiserProductProps[] = await res.json();
 

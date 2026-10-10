@@ -1,6 +1,5 @@
 import CategorySortPage from "../CategorySortPage";
 import CategoryTitleIconPage from "../categoryTitleIcon";
-import ProductCard from "../ProductCard";
 interface CategoryPageProps {
   params: Promise<{ categoryId: string }>;
 }
@@ -13,7 +12,7 @@ const CategoryPage = async ({ params }: CategoryPageProps) => {
   const categoryData = await res.json();
   // category Product
   const productRes = await fetch(
-    `https://api.abcz.workers.dev/api/bazardor/products?category=${categoryId}`,
+    `https://openapi.programming-hero.com/api/bazardor/products?category=${categoryId}`,
   );
   const productData = await productRes.json();
 
