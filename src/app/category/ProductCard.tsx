@@ -2,7 +2,7 @@ import { FaEquals } from "react-icons/fa";
 import { RxTriangleDown, RxTriangleUp } from "react-icons/rx";
 
 interface ProductCardProps {
-  productData: {
+  sortedProducts: {
     id: number;
     slug: string;
     nameBn: string;
@@ -19,21 +19,22 @@ interface ProductCardProps {
   }[];
 }
 
-const ProductCard = ({ productData }: ProductCardProps) => {
+const ProductCard = ({ sortedProducts }: ProductCardProps) => {
   const unitText = {
     kg: "কেজি",
     litre: "লিটার",
     dozen: "ডজন",
     piece: "পিস",
   };
+
   return (
     <div>
       <h1 className="text-[16px] text-[#1D271F] py-5">
-        মোট {productData.length} টি পণ্য দেখানো হচ্ছে{" "}
+        মোট {sortedProducts.length} টি পণ্য দেখানো হচ্ছে
       </h1>
 
       <div className="grid grid-cols-3 gap-5">
-        {productData.map((data) => {
+        {sortedProducts.map((data) => {
           return (
             <div
               key={data.id}

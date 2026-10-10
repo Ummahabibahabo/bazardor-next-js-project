@@ -23,8 +23,10 @@ const CategoryPage = async ({ params }: CategoryPageProps) => {
         data={categoryData}
         productData={productData}
       ></CategoryTitleIconPage>
-      <CategorySortPage data={categoryData}></CategorySortPage>
-      <ProductCard productData={productData}></ProductCard>
+      <CategorySortPage
+        data={categoryData}
+        productData={productData}
+      ></CategorySortPage>
     </div>
   );
 };
