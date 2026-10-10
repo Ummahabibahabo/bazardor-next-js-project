@@ -8,7 +8,7 @@ interface NavLinkProps {
 }
 const NavLink = async () => {
   const res = await fetch(
-    "https://api.api-store.workers.dev/api/bazardor/categories",
+    "https://api.abcz.workers.dev/api/bazardor/categories",
   );
   const navLinksData: NavLinkProps[] = await res.json();
 
